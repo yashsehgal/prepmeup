@@ -1,16 +1,7 @@
-name: Adds all issues to the PrepMeUp project board
-
-on:
-  issues:
-    types:
-      - opened
-
-jobs:
-  add-to-project:
-    name: Add issue to project
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/add-to-project
-        with:
-          project-url: https://github.com/users/yashsehgal/projects/6
-          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+- name: Add To GitHub projects
+  uses: actions/add-to-project@v0.5.0
+  with:
+    # URL of the project to add issues to
+    project-url: https://github.com/users/yashsehgal/projects/6/views/2
+    # A GitHub personal access token with write access to the project
+    github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
