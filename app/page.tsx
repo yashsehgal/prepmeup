@@ -1,8 +1,9 @@
+import StatusAlert from "@/components/ui/status-alert";
 
 const App: React.FunctionComponent = () => {
   return (
-    <div className="app">
-      App is working...
+    <div className="app m-12">
+      <StatusAlert />
     </div>
   )
 }
