@@ -1,6 +1,6 @@
 import ViewContainer from "@/components/layouts/view-container";
 import FeatureOption from "@/components/ui/feature-option";
-import { Video } from "lucide-react";
+import { Briefcase, FileSearch, MessagesSquare, PencilLine, Video } from "lucide-react";
 
 const FeatureList: Array<FeatureOptionInterface> = [
   {
@@ -9,15 +9,19 @@ const FeatureList: Array<FeatureOptionInterface> = [
   },
   {
     featureName: "ATS Resume Review",
+    icon: <FileSearch />
   },
   {
-    featureName: "Topic Based Q/A"
+    featureName: "Topic Based Q/A",
+    icon: <MessagesSquare />
   },
   {
-    featureName: "Mock Aptitude"
+    featureName: "Mock Aptitude",
+    icon: <PencilLine />
   },
   {
-    featureName: "Behavioural Rounds"
+    featureName: "Behavioural Rounds",
+    icon: <Briefcase />
   },
 ]
 
