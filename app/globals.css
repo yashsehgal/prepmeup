@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.view-container{
+    @apply m-auto w-11/12 flex place-items-center py-4
+}

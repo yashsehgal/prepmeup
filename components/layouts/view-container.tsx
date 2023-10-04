@@ -1,8 +1,6 @@
-const ViewContainer: React.FunctionComponent = () => {
-    return(
-        <div className="view-container">
-
-        </div>
-    )
-}
-export default ViewContainer;
+// const ViewContainer: React.FunctionComponent = ({children: any}) => {
+//     return(
+//         <div className="view-container">{children}</div>
+//     )
+// }
+// export default ViewContainer;
