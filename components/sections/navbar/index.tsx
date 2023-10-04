@@ -7,7 +7,7 @@ const Navbar: React.FunctionComponent = () => {
   return (
     <nav className="navbar">
       <ViewContainer className="flex">
-        <div className="font-semibold text-2xl">Welcome User</div>
+        <h1 className="font-semibold text-2xl">Welcome User</h1>
         <div className="flex gap-2">
           <Button variant="outline">
             <Sun /><span className="text-lg mx-1">/</span><Moon />
