@@ -6,23 +6,28 @@ import { Briefcase, FileSearch, MessagesSquare, PencilLine, Video } from "lucide
 const FeatureList: Array<FeatureOptionInterface> = [
   {
     featureName: "Video Interview",
-    icon: <Video className={cn("max-md:w-4 h-auto")} />
+    icon: <Video className={cn("max-md:w-4 h-auto")} />,
+    link: "#"
   },
   {
     featureName: "ATS Resume Review",
-    icon: <FileSearch className={cn("max-md:w-4 h-auto")} />
+    icon: <FileSearch className={cn("max-md:w-4 h-auto")} />,
+    link: "#"
   },
   {
     featureName: "Topic Based Q/A",
-    icon: <MessagesSquare className={cn("max-md:w-4 h-auto")} />
+    icon: <MessagesSquare className={cn("max-md:w-4 h-auto")} />,
+    link: "/qna"
   },
   {
     featureName: "Mock Aptitude",
-    icon: <PencilLine className={cn("max-md:w-4 h-auto")} />
+    icon: <PencilLine className={cn("max-md:w-4 h-auto")} />,
+    link: "#"
   },
   {
     featureName: "Behavioural Rounds",
-    icon: <Briefcase className={cn("max-md:w-4 h-auto")} />
+    icon: <Briefcase className={cn("max-md:w-4 h-auto")} />,
+    link: "#"
   },
 ]
 
@@ -40,6 +45,7 @@ const DashboardFeatureList: React.FunctionComponent = () => {
             <FeatureOption
               featureName={featureItem.featureName}
               icon={featureItem.icon}
+              link={featureItem.link}
               key={featureIndex}
             />
           ))}

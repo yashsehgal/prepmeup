@@ -4,11 +4,12 @@ import Link from "next/link"
 const FeatureOption: React.FunctionComponent<FeatureOptionInterface> = ({
   featureName,
   icon,
+  link,
   className,
   ...props
 }) => {
   return (
-    <Link href={""} className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
+    <Link href={link} className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
       <div
         className={cn("relative w-[240px] h-[140px] rounded-2xl border border-transparent bg-gradient-to-tr from-neutral-900 to-neutral-800 text-neutral-50 shadow transition-all",
           "max-xl:w-[220px] max-xl:h-[120px]",

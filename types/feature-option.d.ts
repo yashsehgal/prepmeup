@@ -7,4 +7,5 @@ declare interface FeatureOptionInterface extends React.HTMLAttributes<HTMLDivEle
   | "Behavioural Rounds"
   ;
   icon?: React.ReactNode;
+  link: string;
 };
