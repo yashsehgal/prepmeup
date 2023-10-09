@@ -21,7 +21,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
   return (
     <PageContent>
       <header className="topic-based-qna-header">
-        <ViewContainer>
+        <ViewContainer className="flex flex-row items-center justify-between">
           <h1 className="text-4xl font-semibold">
             {"Your Q/A Sessions"}
           </h1>
