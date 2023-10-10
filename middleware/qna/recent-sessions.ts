@@ -4,7 +4,7 @@ import { populateRecentQNASessions } from "@/mocks/qna-session-mocks";
 function fetchRecentQNASessions() {
   switch (Environment.ENVIRONMENT_TYPE) {
     case "development":
-      return populateRecentQNASessions();
+      return populateRecentQNASessions;
     case "production":
       // TODO: write fetchAPI instance for returning recent sessions via firestore
       return [];

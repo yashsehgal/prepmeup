@@ -1,6 +1,5 @@
 import ViewContainer from "@/components/layouts/view-container"
 import { cn } from "@/lib/utils"
-import { fetchRecentQNASessions } from "@/middleware/qna/recent-sessions";
 
 const RecentQnASessionsList: React.FunctionComponent = ()=>{
     return(

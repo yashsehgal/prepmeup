@@ -1,6 +1,6 @@
 
-function populateRecentQNASessions(): RecentQNASessionCardInterface[] {
-  return [
+const populateRecentQNASessions: Array<RecentQNASessionCardInterface> = [
+  
     {
       lastMessageContent: "React Diffing Algorithm manages the changes",
       title: "Discussing how react diff works?",
@@ -37,7 +37,7 @@ function populateRecentQNASessions(): RecentQNASessionCardInterface[] {
       sessionID: "qna-9v38457t9857bt7"
     },
   ]
-}
+
 
 export {
   populateRecentQNASessions
