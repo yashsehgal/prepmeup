@@ -1,3 +1,4 @@
+import ComponentList from "@/components/layouts/component-list";
 import ViewContainer from "@/components/layouts/view-container";
 import FeatureOption from "@/components/ui/feature-option";
 import { cn } from "@/lib/utils";
@@ -38,9 +39,7 @@ const DashboardFeatureList: React.FunctionComponent = () => {
         <h3 className="text-lg font-semibold">
           {"Start new activity"}
         </h3>
-        <div className={cn("features-list-container mt-3 py-2 flex flex-row gap-4 overflow-x-scroll hide-scrollbar",
-          "max-md:grid max-md:grid-cols-2 max-md:gap-y-4 max-md:gap-x-4 max-md:overflow-visible max-md:w-fit",
-        )}>
+        <ComponentList>
           {FeatureList.map((featureItem, featureIndex) => (
             <FeatureOption
               featureName={featureItem.featureName}
@@ -49,7 +48,7 @@ const DashboardFeatureList: React.FunctionComponent = () => {
               key={featureIndex}
             />
           ))}
-        </div>
+        </ComponentList>
       </ViewContainer>
     </section>
   )

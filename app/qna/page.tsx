@@ -20,13 +20,12 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { fetchRecentQNASessions } from "@/middleware/qna/recent-sessions";
 import { RecentSessionsEmptyStateView } from "@/components/ui/empty-states";
-import { cn } from "@/lib/utils";
 import { RecentQnASessionsList } from "@/components/sections/recent-qna-sessions-list";
 
 const TopicBasedQNA: React.FunctionComponent = () => {
   const [recentQNASessions, setRecentQNASessions]
     = useState<Array<RecentQNASessionCardInterface>>(
-      fetchRecentQNASessions() 
+      fetchRecentQNASessions()
     );
 
   return (
@@ -61,7 +60,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
-                          {/* <SelectItem value="working">working</SelectItem> */}
+                          {/* Render select items here */}
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -76,7 +75,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
-                          {/* <SelectItem value="working">working</SelectItem> */}
+                          {/* Render select items here */}
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -93,7 +92,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
         </ViewContainer>
       </header>
       {recentQNASessions.length
-        ? <RecentQnASessionsList/>
+        ? <RecentQnASessionsList />
         : <RecentSessionsEmptyStateView />
       }
     </PageContent >
