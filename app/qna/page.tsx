@@ -21,11 +21,12 @@ import { useState } from "react";
 import { fetchRecentQNASessions } from "@/middleware/qna/recent-sessions";
 import { RecentSessionsEmptyStateView } from "@/components/ui/empty-states";
 import { cn } from "@/lib/utils";
+import { RecentQnASessionsList } from "@/components/sections/recent-qna-sessions-list";
 
 const TopicBasedQNA: React.FunctionComponent = () => {
   const [recentQNASessions, setRecentQNASessions]
     = useState<Array<RecentQNASessionCardInterface>>(
-      fetchRecentQNASessions() && []
+      fetchRecentQNASessions() 
     );
 
   return (
@@ -92,20 +93,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
         </ViewContainer>
       </header>
       {recentQNASessions.length
-        ? <section className="recent-qna-sessions-container mt-12">
-          <ViewContainer>
-            <h3 className="leading-snug text-base font-normal text-neutral-400">
-              {"Recent sessions"}
-            </h3>
-            <div className={
-              cn("features-list-container mt-3 py-2 flex flex-row gap-4 overflow-x-scroll hide-scrollbar",
-                "max-md:grid max-md:grid-cols-2 max-md:gap-y-4 max-md:gap-x-4 max-md:overflow-visible max-md:w-fit",
-              )
-            }>
-
-            </div>
-          </ViewContainer>
-        </section>
+        ? <RecentQnASessionsList/>
         : <RecentSessionsEmptyStateView />
       }
     </PageContent >
