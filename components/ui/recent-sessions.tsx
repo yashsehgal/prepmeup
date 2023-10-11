@@ -12,7 +12,7 @@ const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = (
           "max-xl:w-[220px] max-xl:h-[120px]",
           "max-lg:w-[200px] max-lg:h-[100px]",
           "max-sm:rounded-xl",
-          "hover:shadow-md hover:brightness-125",
+          "hover:shadow-md hover:brightness-90",
         )}
       >
         <MessageSquare className={cn("absolute icon-wrapper top-4 right-4 text-black")} />
