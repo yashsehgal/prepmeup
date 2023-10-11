@@ -92,7 +92,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
         </ViewContainer>
       </header>
       {recentQNASessions.length
-        ? <RecentQnASessionsList {...recentQNASessions}/>
+        ? <RecentQnASessionsList data={recentQNASessions}/>
         : <RecentSessionsEmptyStateView />
       }
     </PageContent >

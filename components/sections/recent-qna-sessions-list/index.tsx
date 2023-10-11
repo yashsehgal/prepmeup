@@ -3,7 +3,7 @@ import { fetchRecentQNASessions } from "@/middleware/qna/recent-sessions"
 import RecentSession from "@/components/ui/recent-session"
 import BoxCardSlider from "@/components/layouts/box-card-slider"
 
-const RecentQnASessionsList: React.FunctionComponent<Array<QNASessionCardInterface>> = (recentSessionData) => {
+const RecentQnASessionsList: React.FunctionComponent<{data:Array<QNASessionCardInterface>}> = ({data}) => {
   return (
     <section className="recent-qna-sessions-container mt-12">
       <ViewContainer>
@@ -11,7 +11,7 @@ const RecentQnASessionsList: React.FunctionComponent<Array<QNASessionCardInterfa
           {"Recent sessions"}
         </h3>
         <BoxCardSlider>
-          {recentSessionData.map((recentSession, index) => {
+          {data.map((recentSession, index) => {
             return (
               <RecentSession key={index} lastMessageContent={recentSession.lastMessageContent} sessionID={recentSession.sessionID} title={recentSession.title} />
             )
