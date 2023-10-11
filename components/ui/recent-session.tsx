@@ -3,7 +3,7 @@ import Link from "next/link"
 import { MessageSquare } from "lucide-react"
 import { BoxCard } from "../layouts/box-card"
 
-const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = ({
+const RecentSession: React.FunctionComponent<RecentQNASessionCardInterface> = ({
   lastMessageContent,
   title,
   ...props
@@ -23,4 +23,4 @@ const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = (
   )
 }
 
-export default RecentSessions;
+export default RecentSession;

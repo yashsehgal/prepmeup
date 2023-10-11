@@ -1,4 +1,4 @@
-import ComponentList from "@/components/layouts/component-list";
+import BoxCardSlider from "@/components/layouts/box-card-slider";
 import ViewContainer from "@/components/layouts/view-container";
 import FeatureOption from "@/components/ui/feature-option";
 import { FeatureList } from "@/common/dashboard-feature-list";
@@ -11,7 +11,7 @@ const DashboardFeatureList: React.FunctionComponent = () => {
         <h3 className="text-lg font-semibold">
           {"Start new activity"}
         </h3>
-        <ComponentList>
+        <BoxCardSlider>
           {FeatureList.map((featureItem, featureIndex) => (
             <FeatureOption
               featureName={featureItem.featureName}
@@ -20,7 +20,7 @@ const DashboardFeatureList: React.FunctionComponent = () => {
               key={featureIndex}
             />
           ))}
-        </ComponentList>
+        </BoxCardSlider>
       </ViewContainer>
     </section>
   )

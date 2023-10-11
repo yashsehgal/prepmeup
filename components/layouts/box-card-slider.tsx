@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils"
 
-const ComponentList: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
+const BoxCardSlider: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement>> = ({
   className,
   children,
   ...props
@@ -14,4 +14,4 @@ const ComponentList: React.FunctionComponent<React.HTMLAttributes<HTMLDivElement
   )
 }
 
-export default ComponentList;
+export default BoxCardSlider;
