@@ -4,7 +4,7 @@ import RecentSession from "@/components/ui/recent-session"
 import BoxCardSlider from "@/components/layouts/box-card-slider"
 
 const RecentQnASessionsList: React.FunctionComponent = () => {
-  const RecentSessionsData: Array<RecentQNASessionCardInterface> = fetchRecentQNASessions();
+  const RecentSessionsData: Array<QNASessionCardInterface> = fetchRecentQNASessions();
   return (
     <section className="recent-qna-sessions-container mt-12">
       <ViewContainer>

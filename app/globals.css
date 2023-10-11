@@ -24,6 +24,3 @@ h1, h2, h3, h4 {
     @apply grid grid-cols-1 gap-2 my-3;
 }
 
-.card-box{
-    @apply relative w-[240px] h-[140px] rounded-2xl border-transparent shadow transition-all
-}
