@@ -3,7 +3,8 @@ import Link from "next/link"
 import { MessageSquare } from "lucide-react"
 
 const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = ({
-    lastMessageContent
+  lastMessageContent,
+  title
 }) => {
   return (
     <Link href="#" className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
@@ -18,6 +19,7 @@ const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = (
         <MessageSquare className={cn("absolute icon-wrapper top-4 right-4 text-black")} />
         {<p className="absolute font-medium text-lg text-slate-300 bottom-4 left-4 max-lg:text-base">{lastMessageContent}</p>}
       </div>
+      <h4 className={"font-semibold text-xl leading-7 p-2"}>{title}</h4>
     </Link>
   )
 }
