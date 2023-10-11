@@ -24,7 +24,7 @@ import { RecentQnASessionsList } from "@/components/sections/recent-qna-sessions
 
 const TopicBasedQNA: React.FunctionComponent = () => {
   const [recentQNASessions, setRecentQNASessions]
-    = useState<Array<RecentQNASessionCardInterface>>(
+    = useState<Array<QNASessionCardInterface>>(
       fetchRecentQNASessions()
     );
 
