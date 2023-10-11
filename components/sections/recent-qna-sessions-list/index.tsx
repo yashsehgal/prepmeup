@@ -13,11 +13,13 @@ const RecentQnASessionsList: React.FunctionComponent = () => {
           {"Recent sessions"}
         </h3>
         <ComponentList>
-          {RecentSessionsData.map(obj => {
+          {RecentSessionsData.map((recentSession, index) => {
             return (
-              <div>
-                <RecentSessions lastMessageContent={obj.lastMessageContent} sessionID={obj.sessionID} title={obj.title} />
-                <h4 className={"font-semibold text-xl leading-7 p-2"}>{obj.title}</h4>
+              <div
+                key={index}
+              >
+                <RecentSessions lastMessageContent={recentSession.lastMessageContent} sessionID={recentSession.sessionID} title={recentSession.title} />
+                <h4 className={"font-semibold text-xl leading-7 p-2"}>{recentSession.title}</h4>
               </div>
             )
           }
