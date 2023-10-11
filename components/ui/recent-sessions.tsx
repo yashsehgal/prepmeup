@@ -8,7 +8,7 @@ const RecentSessions: React.FunctionComponent<RecentQNASessionCardInterface> = (
   return (
     <Link href="#" className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
       <div
-        className={cn("relative w-[240px] h-[140px] rounded-2xl border-transparent bg-slate-100 to-neutral-800 text-neutral-50 shadow transition-all",
+        className={cn("card-box bg-slate-100 to-neutral-800 text-neutral-50",
           "max-xl:w-[220px] max-xl:h-[120px]",
           "max-lg:w-[200px] max-lg:h-[100px]",
           "max-sm:rounded-xl",
