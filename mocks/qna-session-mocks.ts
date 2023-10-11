@@ -1,5 +1,5 @@
 
-const populateRecentQNASessions: Array<RecentQNASessionCardInterface> = [
+const populateRecentQNASessions: Array<QNASessionCardInterface> = [
   
     {
       lastMessageContent: "React Diffing Algorithm manages the changes",
