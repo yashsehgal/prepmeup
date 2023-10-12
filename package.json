@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-check": "prettier --check --ignore-path .gitignore .",
+    "lint-fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -35,6 +37,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
+    "prettier": "3.0.3",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
