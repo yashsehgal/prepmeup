@@ -1,6 +1,6 @@
-import ViewContainer from "@/components/layouts/view-container"
-import { cn } from "@/lib/utils"
-import Image from "next/image"
+import ViewContainer from '@/components/layouts/view-container';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const RecentSessionsEmptyStateView: React.FunctionComponent = () => {
   return (
@@ -8,10 +8,10 @@ const RecentSessionsEmptyStateView: React.FunctionComponent = () => {
       <ViewContainer>
         <div className="recent-sessions-empty-state-content-wrapper w-fit mx-auto">
           <Image
-            src={"/media/empty-state-graphic.svg"}
-            width={"400"}
-            height={"400"}
-            className={cn("")}
+            src={'/media/empty-state-graphic.svg'}
+            width={'400'}
+            height={'400'}
+            className={cn('')}
             id="empty-state-graphic"
             loading="lazy"
             alt="No Recent Sessions"
@@ -23,9 +23,7 @@ const RecentSessionsEmptyStateView: React.FunctionComponent = () => {
         </div>
       </ViewContainer>
     </section>
-  )
-}
+  );
+};
 
-export {
-  RecentSessionsEmptyStateView
-}
+export { RecentSessionsEmptyStateView };

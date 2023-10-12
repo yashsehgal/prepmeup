@@ -1,1 +1,1 @@
-export { RecentSessionsEmptyStateView } from "./no-recent-sessions";
+export { RecentSessionsEmptyStateView } from './no-recent-sessions';

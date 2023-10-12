@@ -12,7 +12,7 @@
     "titleBar.activeForeground": "#ffffff",
     "titleBar.inactiveBackground": "#3770FF",
     "titleBar.inactiveForeground": "#ffffff"
-  },
+  }
   // Enables TypeScript check for all files, but instantly kills RAM so only enable when needed
   // "typescript.tsserver.experimental.enableProjectDiagnostics": true
 }

@@ -1,10 +1,18 @@
-"use client";
-import PageContent from "@/components/layouts/page-content";
-import ViewContainer from "@/components/layouts/view-container";
+'use client';
+import PageContent from '@/components/layouts/page-content';
+import ViewContainer from '@/components/layouts/view-container';
 
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 
 import {
   Select,
@@ -14,27 +22,24 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from '@/components/ui/select';
 
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
-import { fetchRecentQNASessions } from "@/middleware/qna/recent-sessions";
-import { RecentSessionsEmptyStateView } from "@/components/ui/empty-states";
-import { RecentQnASessionsList } from "@/components/sections/recent-qna-sessions-list";
+import { Label } from '@/components/ui/label';
+import { useState } from 'react';
+import { fetchRecentQNASessions } from '@/middleware/qna/recent-sessions';
+import { RecentSessionsEmptyStateView } from '@/components/ui/empty-states';
+import { RecentQnASessionsList } from '@/components/sections/recent-qna-sessions-list';
 
 const TopicBasedQNA: React.FunctionComponent = () => {
-  const [recentQNASessions, setRecentQNASessions]
-    = useState<Array<QNASessionCardInterface>>(
-      fetchRecentQNASessions()
-    );
+  const [recentQNASessions, setRecentQNASessions] = useState<
+    Array<QNASessionCardInterface>
+  >(fetchRecentQNASessions());
 
   return (
     <PageContent>
       <header className="topic-based-qna-header">
         <ViewContainer className="flex flex-row items-center justify-between">
-          <h1 className="text-4xl font-semibold">
-            {"Your Q/A Sessions"}
-          </h1>
+          <h1 className="text-4xl font-semibold">{'Your Q/A Sessions'}</h1>
           <div className="my-6 flex flex-row items-center gap-4">
             <Dialog>
               <DialogTrigger asChild>
@@ -42,11 +47,10 @@ const TopicBasedQNA: React.FunctionComponent = () => {
               </DialogTrigger>
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>
-                    Start a new Q/A Session
-                  </DialogTitle>
+                  <DialogTitle>Start a new Q/A Session</DialogTitle>
                   <DialogDescription>
-                    Provide information related to new session. This helps us to gather topics for you
+                    Provide information related to new session. This helps us to
+                    gather topics for you
                   </DialogDescription>
                 </DialogHeader>
                 <div className="new-session-form-container">
@@ -54,9 +58,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                     <Label>Select topic</Label>
                     <Select>
                       <SelectTrigger>
-                        <SelectValue
-                          placeholder="Choose topic, domain"
-                        />
+                        <SelectValue placeholder="Choose topic, domain" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
@@ -69,9 +71,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                     <Label>Diversity & Depth</Label>
                     <Select>
                       <SelectTrigger>
-                        <SelectValue
-                          placeholder="Choose level of diversity"
-                        />
+                        <SelectValue placeholder="Choose level of diversity" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
@@ -91,12 +91,13 @@ const TopicBasedQNA: React.FunctionComponent = () => {
           </div>
         </ViewContainer>
       </header>
-      {recentQNASessions.length
-        ? <RecentQnASessionsList data={recentQNASessions}/>
-        : <RecentSessionsEmptyStateView />
-      }
-    </PageContent >
-  )
+      {recentQNASessions.length ? (
+        <RecentQnASessionsList data={recentQNASessions} />
+      ) : (
+        <RecentSessionsEmptyStateView />
+      )}
+    </PageContent>
+  );
 };
 
 export default TopicBasedQNA;
