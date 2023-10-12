@@ -1,11 +1,15 @@
-import StatusAlert from "@/components/ui/status-alert";
+import PageContent from '@/components/layouts/page-content';
+import ViewContainer from '@/components/layouts/view-container';
+import StatusAlert from '@/components/ui/status-alert';
 
 const App: React.FunctionComponent = () => {
   return (
-    <div className="app m-12">
-      <StatusAlert />
-    </div>
-  )
-}
+    <PageContent>
+      <ViewContainer>
+        <StatusAlert />
+      </ViewContainer>
+    </PageContent>
+  );
+};
 
 export default App;

@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+html {
+  @apply text-neutral-800;
+}
+
+.view-container {
+  @apply box-border mx-auto;
+  @apply w-[1250px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[720px] max-md:w-[600px] max-sm:w-[440px];
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply tracking-tight;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.form-input-wrapper {
+  @apply grid grid-cols-1 gap-2 my-6;
+}
