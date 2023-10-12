@@ -1,10 +1,9 @@
-
 const DashboardRecentActivity: React.FunctionComponent = () => {
   return (
     <section className="dashboard-recent-activity">
-      {"DashboardRecentActivity"}
+      {'DashboardRecentActivity'}
     </section>
-  )
-}
+  );
+};
 
 export default DashboardRecentActivity;

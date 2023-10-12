@@ -1,10 +1,5 @@
-
 const TopicSuggestions: React.FunctionComponent = () => {
-  return (
-    <section className="topic-suggestions">
-      {"TopicSuggestions"}
-    </section>
-  )
-}
+  return <section className="topic-suggestions">{'TopicSuggestions'}</section>;
+};
 
 export default TopicSuggestions;
