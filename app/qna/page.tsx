@@ -29,11 +29,16 @@ import { useState } from 'react';
 import { fetchRecentQNASessions } from '@/middleware/qna/recent-sessions';
 import { RecentSessionsEmptyStateView } from '@/components/ui/empty-states';
 import { RecentQnASessionsList } from '@/components/sections/recent-qna-sessions-list';
+import { fetchTopics } from '@/middleware/qna/sessions';
+import { getTopicDepthLevels } from '@/common';
 
 const TopicBasedQNA: React.FunctionComponent = () => {
   const [recentQNASessions, setRecentQNASessions] = useState<
     Array<QNASessionCardInterface>
   >(fetchRecentQNASessions());
+
+  const [userTopics, setUserTopics]
+    = useState<Array<TopicInterface>>(fetchTopics());
 
   return (
     <PageContent>
@@ -62,7 +67,13 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
-                          {/* Render select items here */}
+                          {userTopics.map((topic, topicIndex) => {
+                            return (
+                              <SelectItem value={topic.title} key={topicIndex}>
+                                {topic.emoji + " " + topic.title}
+                              </SelectItem>
+                            )
+                          })}
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -75,7 +86,13 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectGroup>
-                          {/* Render select items here */}
+                          {getTopicDepthLevels().map((depthLevel, depthLevelIndex) => {
+                            return (
+                              <SelectItem value={depthLevel} key={depthLevelIndex}>
+                                {depthLevel}
+                              </SelectItem>
+                            )
+                          })}
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -83,7 +100,7 @@ const TopicBasedQNA: React.FunctionComponent = () => {
                 </div>
                 <DialogFooter>
                   <DialogTrigger>
-                    <Button>Save</Button>
+                    <Button>Create new session</Button>
                   </DialogTrigger>
                 </DialogFooter>
               </DialogContent>

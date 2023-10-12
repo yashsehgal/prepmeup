@@ -36,4 +36,29 @@ const populateRecentQNASessions: Array<QNASessionCardInterface> = [
   },
 ];
 
-export { populateRecentQNASessions };
+function populateTopics(): Array<TopicInterface> {
+  return [
+    {
+      emoji: '🍕',
+      title: 'Frontend Engineering',
+    },
+    {
+      emoji: '⚙️',
+      title: 'Dynamic Programming',
+    },
+    {
+      emoji: '🧑🏽‍💻',
+      title: 'System Designing',
+    },
+    {
+      emoji: '🐍',
+      title: 'Python Programming',
+    },
+    {
+      emoji: '⚡️',
+      title: 'Javascript',
+    },
+  ];
+}
+
+export { populateRecentQNASessions, populateTopics };
