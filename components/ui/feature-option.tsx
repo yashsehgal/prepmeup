@@ -12,7 +12,7 @@ const FeatureOption: React.FunctionComponent<FeatureOptionInterface> = ({
   return (
     <Link
       href={link}
-      className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
+      className="w-fit focus:outline-none h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all">
       <BoxCard
         className={cn(
           'bg-gradient-to-tr from-neutral-900 to-neutral-800 text-neutral-50',

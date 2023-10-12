@@ -11,7 +11,7 @@ const RecentSession: React.FunctionComponent<QNASessionCardInterface> = ({
   return (
     <Link
       href="#"
-      className="w-fit focus:outline-none focus:ring h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all focus:ring-offset-2 focus:ring-neutral-300">
+      className="w-fit active:outline-none active:transition-none focus:outline-none h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all">
       <BoxCard className={cn('bg-neutral-100 hover:brightness-90')}>
         <MessageSquare
           className={cn('absolute icon-wrapper top-4 right-4 text-black')}
