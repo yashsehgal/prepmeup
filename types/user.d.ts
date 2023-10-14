@@ -4,5 +4,8 @@ declare interface TopicInterface {
    * @default "⚙️"
    */
   emoji: string | '⚙️';
+  /**
+   * name of the topic/domain/skill
+   */
   title: string;
 }
