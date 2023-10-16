@@ -1,7 +1,7 @@
 
 const CreateAccountFlow: React.FunctionComponent = () => {
   return (
-    <></>
+    <>create account</>
   )
 }
 
