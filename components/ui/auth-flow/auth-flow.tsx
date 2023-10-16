@@ -15,7 +15,7 @@ const AuthFlow: React.FunctionComponent = () => {
           <Button>Get started</Button>
         </DialogTrigger>
         <DialogContent>
-          <DialogHeader>
+          <DialogHeader className="mb-3">
             <DialogTitle className="text-4xl font-semibold">
               {view === "login" ? "Login" : "Create Account"}
             </DialogTitle>

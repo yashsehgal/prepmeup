@@ -55,6 +55,9 @@ const LoginEmailInputView: React.FunctionComponent<LoginEmailInputViewProps> = (
         placeholder="Enter your email or username"
         className="px-6 py-4 text-lg placeholder:text-neutral-400 bg-neutral-100 focus:bg-neutral-50"
         onChange={(e) => setEmailInput(e.target.value as string)}
+        onKeyDown={(e) => {
+          if (emailInput && e.key === "Enter") setFlow("password");
+        }}
         value={emailInput}
       />
       {emailInput && <motion.button
