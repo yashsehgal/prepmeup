@@ -58,6 +58,7 @@ declare interface CreateAccountEmailInputViewProps {
  * interface for CreateAccountPasswordInputView Props
  */
 declare interface CreateAccountPasswordInputViewProps {
+  data: CreateAccountDataType;
   setCreateAccountData: (data: CreateAccountDataType) => void;
   setFlow: (value: CreateAccountFlowType) => void;
 }
