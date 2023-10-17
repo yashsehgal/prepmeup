@@ -1,17 +1,16 @@
 import PageContent from "@/components/layouts/page-content"
 import ViewContainer from "@/components/layouts/view-container"
 import { Button } from "@/components/ui/button"
+import { QnaQuestionsList } from "@/components/sections/qna-questions-list"
+import { fetchQnaQuestions } from "@/middleware/qna/qna-questions"
 
 
 const QNASession : React.FunctionComponent = () =>{
-    console.log()
+    
     return(
         <PageContent>
             <ViewContainer className="flex justify-between">
-                <section className="qna-session-question-list">
-                    <div className="qna-session-topic">[Topic]</div>
-                    <div className="qna-questions flex flex-col">[question-list]</div>
-                </section>
+                <QnaQuestionsList data={fetchQnaQuestions()}/>
                 <div>
                     <div className="flex">
                         <div className="remaining-time-wrapper">
