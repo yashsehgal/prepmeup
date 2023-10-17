@@ -12,7 +12,7 @@ const RecentSession: React.FunctionComponent<QNASessionCardInterface> = ({
     <Link
       href="#"
       className="w-fit active:outline-none active:transition-none focus:outline-none h-fit rounded-2xl max-sm:rounded-xl hover:scale-95 active:scale-90 transition-all">
-      <BoxCard className={cn('bg-neutral-100 hover:brightness-90')}>
+      <BoxCard className={cn('bg-neutral-700 hover:brightness-90')}>
         <MessageSquare
           className={cn('absolute icon-wrapper top-4 right-4 text-black')}
         />
