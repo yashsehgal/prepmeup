@@ -59,6 +59,10 @@ const CreateAccountNameInputView: React.FunctionComponent<CreateAccountNameInput
   setCreateAccountData,
   setFlow
 }) => {
+  // auto-focus to first name input
+  useEffect(() => {
+    document.querySelector('input')?.focus();
+  }, []);
   return (
     <>
       <div className="grid grid-cols-2 items-center gap-3">
