@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../dialog";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "../dialog";
 import { Button } from "../button";
-import { Github } from "lucide-react";
 import { CreateAccountFlow, LoginFlow } from ".";
 
 const AuthFlow: React.FunctionComponent = () => {

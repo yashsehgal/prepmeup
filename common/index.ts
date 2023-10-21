@@ -5,6 +5,7 @@ function getTopicDepthLevels() {
   return ['Basic', 'Intermediate', 'Advanced', 'Professional'];
 }
 
-export {
-  getTopicDepthLevels
-}
+const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
+
+export { getTopicDepthLevels };
+export { EMAIL_REGEX };
