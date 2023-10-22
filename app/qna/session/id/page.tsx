@@ -35,8 +35,8 @@ const QNASession : React.FunctionComponent = () =>{
                         <div className="flex flex-col gap-11">
                             <h2 className="question text-3xl font-semibold">[Question]</h2>
                             <div className="answer-wrapper ">
-                                <p className="font-medium mb-1 text-lg" >Write your answer here</p>
-                                <Textarea className="answer-box min-h-[300px] w-full px-4 py-2 text-lg" placeholder="Good luck! You will do well" />
+                                <p className="font-medium mb-1 text-sm" >Write your answer here</p>
+                                <Textarea className="answer-box min-h-[300px] w-full px-4 py-2 placeholder:text-sm text-lg" placeholder="Good luck! You will do well" />
                             </div>
                         </div>
                         <Button className="mark-complete-btn mt-3 flex gap-1"><Check/><span>Mark as completed</span></Button>
