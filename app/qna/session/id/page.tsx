@@ -6,7 +6,8 @@ import { QnaQuestionsList } from "@/components/sections/qna-questions-list"
 import { fetchQnaQuestions } from "@/middleware/qna/qna-questions"
 import { Progress } from "@/components/ui/progress"
 import { useState } from "react"
-import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Check } from 'lucide-react';
 
 
 const QNASession : React.FunctionComponent = () =>{
@@ -26,22 +27,21 @@ const QNASession : React.FunctionComponent = () =>{
                                     <p className="text-neutral-400 font-medium">{time} min</p>
                                 </div>
                             </div>
-                            {/* <div className="qna-progress-line"></div> */}
                             <Progress/>
                         </div>
                         <Button variant="destructive" className="end-session-btn">End Session</Button>
                     </div>
                     <div>
-                        <div className="flex flex-col gap-16">
+                        <div className="flex flex-col gap-11">
                             <h2 className="question text-3xl font-semibold">[Question]</h2>
                             <div className="answer-wrapper ">
-                                <p>Write your answer here</p>
-                                <Input className="answer-box h-3/4 " height="50px" />
+                                <p className="font-medium mb-1 text-lg" >Write your answer here</p>
+                                <Textarea className="answer-box min-h-[300px] w-full px-4 py-2 text-lg" placeholder="Good luck! You will do well" />
                             </div>
                         </div>
-                        <Button className="mark-complete-btn">Mark as completed</Button>
+                        <Button className="mark-complete-btn mt-3 flex gap-1"><Check/><span>Mark as completed</span></Button>
                     </div>
-                    <Button className="submit-btn w-fit ml-auto">Submit and End Session</Button>
+                    <Button className="submit-btn w-fit ml-auto mt-[-25px]">Submit and End Session</Button>
                 </div>
             </ViewContainer>
         </PageContent>
