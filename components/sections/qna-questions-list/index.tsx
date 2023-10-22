@@ -5,8 +5,8 @@ const QnaQuestionsList: React.FunctionComponent<{
     data: Array<QnaQueCardInterface>;
   }> = ({ data }) => {
     return(
-        <section className="qna-question-list">
-            <div className="qna-topic mb-2 text-xl font-bold">Frontend Engineering</div>
+        <section className="qna-question-list flex flex-col items-center">
+            <div className="qna-topic mb-5 text-xl font-bold">Frontend Engineering</div>
             <div className="qna-questions flex flex-col gap-4 overflow-y-scroll hide-scrollbar h-[75svh]">
             {data.map((q, index) => {
             return (
