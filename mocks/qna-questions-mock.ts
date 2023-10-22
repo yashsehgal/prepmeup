@@ -2,7 +2,7 @@
 
 const QnaMockQuestions: Array<QnaQueCardInterface> = [
     {
-        question: "Define Diffing Algorithm",
+        question: "Define Diffing Algorithm ",
         score: 10,
         questionId: "1"
     },
@@ -25,6 +25,31 @@ const QnaMockQuestions: Array<QnaQueCardInterface> = [
         question: "Define Diffing Algorithm",
         score: 10,
         questionId: "5"
+    },
+    {
+        question: "Define Diffing Algorithm",
+        score: 10,
+        questionId: "6"
+    },
+    {
+        question: "Define Diffing Algorithm",
+        score: 10,
+        questionId: "7"
+    },
+    {
+        question: "Define Diffing Algorithm",
+        score: 10,
+        questionId: "8"
+    },
+    {
+        question: "Define Diffing Algorithm",
+        score: 10,
+        questionId: "9"
+    },
+    {
+        question: "Define Diffing Algorithm",
+        score: 10,
+        questionId: "10"
     }
 ]
 

@@ -4,15 +4,16 @@ import ViewContainer from "@/components/layouts/view-container"
 import { Button } from "@/components/ui/button"
 import { QnaQuestionsList } from "@/components/sections/qna-questions-list"
 import { fetchQnaQuestions } from "@/middleware/qna/qna-questions"
-import { Progress } from "@/components/ui/progress"
 import { useState } from "react"
 import { Textarea } from "@/components/ui/textarea"
 import { Check } from 'lucide-react';
+import  {Timer}  from "@/components/ui/qna-timer"
 
 
 const QNASession : React.FunctionComponent = () =>{
     
     const [time, setTime] = useState("12:34")
+    const [progressVal, setProgressVal] = useState(0);
 
     return(
         <PageContent>
@@ -20,15 +21,7 @@ const QNASession : React.FunctionComponent = () =>{
                 <QnaQuestionsList data={fetchQnaQuestions()}/>
                 <div className="w-full flex flex-col gap-16 ">
                     <div className="remainingTime-endSessionAction-wrapper flex justify-between">
-                        <div className="remainingTime-progress-wrapper w-3/4 flex flex-col gap-4">
-                            <div className="remaining-time-wrapper">
-                                <div className="remaining-time flex justify-between">
-                                    <h3 className="font-semibold text-lg">Remaining Time</h3>
-                                    <p className="text-neutral-400 font-medium">{time} min</p>
-                                </div>
-                            </div>
-                            <Progress value={70}/>
-                        </div>
+                        <Timer seconds={3600}/>
                         <Button variant="destructive" className="end-session-btn">End Session</Button>
                     </div>
                     <div>

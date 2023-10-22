@@ -6,8 +6,8 @@ const QnaQuestionsList: React.FunctionComponent<{
   }> = ({ data }) => {
     return(
         <section className="qna-question-list flex flex-col items-center">
-            <div className="qna-topic mb-5 text-xl font-bold">Frontend Engineering</div>
-            <div className="qna-questions flex flex-col gap-4 overflow-y-scroll hide-scrollbar h-[75svh]">
+            <div className="qna-topic mb-7 text-xl font-bold">Frontend Engineering</div>
+            <div className="qna-questions flex flex-col gap-4 overflow-y-scroll max-h-[575px] hide-scrollbar h-[90svh]">
             {data.map((q, index) => {
             return (
               <QnaQuesCard
