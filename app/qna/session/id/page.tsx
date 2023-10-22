@@ -27,7 +27,7 @@ const QNASession : React.FunctionComponent = () =>{
                                     <p className="text-neutral-400 font-medium">{time} min</p>
                                 </div>
                             </div>
-                            <Progress/>
+                            <Progress value={70}/>
                         </div>
                         <Button variant="destructive" className="end-session-btn">End Session</Button>
                     </div>
