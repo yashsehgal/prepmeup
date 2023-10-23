@@ -42,7 +42,7 @@ const QNASession : React.FunctionComponent = () =>{
                     //     score = {q.score}
                     //     questionId={q.questionId}
                     // />
-                        <BoxCard className={cn('bg-neutral-200 hover:brightness-90 flex flex-col justify-between p-4 min-h-[140px] cursor-pointer')} onClick={()=>setQNum(q.questionId)}>
+                        <BoxCard className={cn('bg-neutral-200 hover:brightness-90 flex flex-col justify-between p-4 min-h-[140px] cursor-pointer')} onClick={()=>setQNum(q.questionId)}key={index}>
                             <div className="flex gap-1 align-items-center font-semibold text-lg truncate " >
                                 <span>{q.questionId}.</span>
                                 <p>{q.question}</p>
