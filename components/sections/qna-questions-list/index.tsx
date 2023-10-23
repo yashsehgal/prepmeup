@@ -1,9 +1,7 @@
 import { QnaQuesCard } from "@/components/ui/qna-ques-card";
-import { fetchQnaQuestions } from "@/middleware/qna/qna-questions";
 
-const QnaQuestionsList: React.FunctionComponent<{
-    data: Array<QnaQueCardInterface>;
-  }> = ({ data }) => {
+const QnaQuestionsList: React.FunctionComponent<{ data: Array<QnaQueCardInterface> }> = ({ data }) => {
+  
     return(
         <section className="qna-question-list flex flex-col items-center">
             <div className="qna-topic mb-7 text-xl font-bold">Frontend Engineering</div>
