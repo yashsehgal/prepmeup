@@ -26,7 +26,7 @@ function Timer({ seconds }: any) {
   }, []);
 
   useEffect(() => {
-    const percent = ((totalTime-timer) / seconds) * 100; // Calculate progress relative to 'seconds'
+    const percent = ((totalTime - timer) / seconds) * 100; // Calculate progress relative to 'seconds'
     setProgressVal(percent);
     if (timer <= 0) {
       clearInterval(timerId.current);
@@ -42,7 +42,7 @@ function Timer({ seconds }: any) {
           <div className="text-neutral-400 font-medium">{formatTime(timer)}</div>
         </div>
       </div>
-      <Progress value={progressVal}/>
+      <Progress value={progressVal} />
     </div>
   );
 }
