@@ -7,6 +7,7 @@ import { fetchQnaQuestions } from "@/middleware/qna/qna-questions"
 import { useState } from "react"
 import { Timer } from "@/components/ui/qna-timer"
 import { QnaQuestionAnswerSection } from "@/components/sections/qna-question-answer-section"
+import { QnaEndSessionDialog } from "@/components/ui/qna-end-session-dialog"
 
 
 const QNASession: React.FunctionComponent = () => {
@@ -21,10 +22,11 @@ const QNASession: React.FunctionComponent = () => {
                 <div className="w-full flex flex-col gap-16 ">
                     <div className="remainingTime-endSessionAction-wrapper flex justify-between">
                         <Timer seconds={3600} />
-                        <Button variant="destructive" className="end-session-btn">End Session</Button>
+                        {/* <Button variant="destructive" className="end-session-btn">End Session</Button> */}
+                        <QnaEndSessionDialog variant="destructive" btnText="End Session" />
                     </div>
                     <QnaQuestionAnswerSection questionData={questionData} questionNum= {questionNum}/>
-                    <Button className="submit-btn w-fit ml-auto mt-[-25px]">Submit and End Session</Button>
+                    <QnaEndSessionDialog variant="default" btnText="Submit and End Session" classname="w-fit ml-auto mt-[-25px]" />
                 </div>
             </ViewContainer>
         </PageContent>
