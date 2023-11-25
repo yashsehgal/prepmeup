@@ -33,6 +33,7 @@ import { fetchTopics } from '@/middleware/qna/sessions';
 import { getTopicDepthLevels } from '@/common';
 
 const TopicBasedQNA: React.FunctionComponent = () => {
+  
   const [recentQNASessions, setRecentQNASessions] = useState<
     Array<QNASessionCardInterface>
   >(fetchRecentQNASessions());

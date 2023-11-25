@@ -6,7 +6,7 @@ const BoxCard: React.FunctionComponent<
 > = ({ className, children, ...props }) => (
   <div
     className={cn(
-      'relative w-[240px] h-[140px] rounded-2xl border-transparent shadow transition-all hover:shadow-md',
+      'relative w-[240px] h-[140px] rounded-2xl border-transparent shadow transition-all hover:shadow-md cursor:pointer',
       'max-xl:w-[220px] max-xl:h-[120px]',
       'max-lg:w-[200px] max-lg:h-[100px]',
       'max-sm:rounded-xl',
